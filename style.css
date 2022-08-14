@@ -5,11 +5,10 @@
 }
 
 /* Start Global Style */
-
 .line {
     margin: auto;
     width: 60%;
-    padding: 64px 0;
+    padding: 28px 0;
     display: flex;
     justify-content: space-around;
     align-items: center;
@@ -39,21 +38,24 @@
     background: #D1C898;
     z-index: 10;
 }
-
 /* End Global Style */
-
 
 /* Start Navbar */
 nav.navbar {
-    display: flex;
+    display: none;
+}
+
+nav.mobile-navbar {
+    display: block;
     padding: 20px 5%;
     justify-content: space-between;
     align-items: center;
 }
 
-.navbar h3 {
+.mobile-navbar h3 {
     font-style: italic;
     color: #D1C898;
+    font-size: 16px;
 }
 
 .navbar .menu a{
@@ -91,59 +93,47 @@ nav.navbar {
 .navbar .buy:hover {
     border: 0.2px solid #AB983733;
 }
-
 /* End Navbar */
 
 /* Start Banner */
 #banner {
-    padding: 0 5% 64px 5%;
+    padding: 0 5% 28px 5%;
     display: flex;
+    flex-direction: column;
 }
 
 #banner .box-content {
     position: relative;
 }
 
-/* Media laptop */
-@media(min-width: 992px) {
-    #banner .box-content {
-        position: relative;
-        width: 50%;
-    }
-}
-
 #banner .box-content .decor-content-float {
-    position: absolute;
-    left: 0;
-    padding: 0;
-    width: 90%;
+    padding: 20px 0;
 }
 
 #banner .box-content .decor-content-float .main-content {
     position: relative;
-    padding-top: 36px;
-    font-size: 20px;
-    line-height: 50px;
+    padding-top: 8px;
+    font-size: 32px;
     color: #D1C898;
     font-weight: 800;
     font-style: italic;
 }
 
 #banner .box-content .decor-content-float .sub-content {
-    font-size: 20px;
-    line-height: 20px;
+    font-size: 16px;
+    padding: 20px 0;
     color: #D1C898;
     font-weight: 400;
     text-align: justify;
-    padding-bottom: 20px;
 }
 
 #banner .box-content .decor-content-float .buy {
-    padding: 12px 16px;
+    padding: 8px 12px;
     font-weight: 600;
     color: #fff;
     background: #D1C898;
     border: none;
+    font-size: 12px;
     border-top-left-radius: 24px;
     border-top-right-radius: 24px;
     border-bottom-left-radius: 12px;
@@ -152,67 +142,34 @@ nav.navbar {
     text-decoration: none;
 }
 
-@media(min-width:992px) {
-    #banner .box-content .decor-content-float {
-        position: absolute;
-        left: 0;
-        padding: 20px;
-        width: 80%;
-        z-index: 10;
-        opacity: 1;
-    }
-
-    #banner .box-content .decor-content-float .main-content {
-        font-size: 42px;
-        line-height: 64px;
-        color: #D1C898;
-        font-weight: 800;
-        font-style: italic;
-        padding-bottom: 20px;
-    }
-
-    #banner .box-content .decor-content-float .sub-content {
-        font-size: 24px;
-        line-height: 36px;
-        color: #aaa;
-        font-weight: 400;
-        text-align: justify;
-        padding-bottom: 36px;
-    }
-}
-
 #banner .image-content {
     position: relative;
-    width: 50%;
+    padding: 24px;
 }
 
 #banner .image-content .background-content {
-    position: relative;
-    top: 0%;
-    left: 50%;
     transform: translateX(-50%);
     border-radius: 50%;
     background: #93913E8C;
     opacity: 0.2;
-    width: 420px;
-    height: 420px;
-    margin: 32px 0;
+    width: 280px;
+    height: 280px;
+    margin: 10px 0;
 }
 
 #banner .image-content img {
     position: absolute;
-    top: 5%;
-    left: 10%;
+    top: 10%;
+    left: 20%;
+    transform: translateX(-50%);
     width: 80%;
-    height: 100%;
+    height: 80%;
     filter: drop-shadow(0 10px 12px #93913E8C);
     transform: rotate(-3deg);
 }
-
 /* End Banner */
 
 /* Start Khasiat */
-
 #khasiat {
     min-height: 64vh;
 }
@@ -220,16 +177,16 @@ nav.navbar {
 #khasiat .box-khasiat {
     padding: 0 5%;  
     display: flex;
-    flex-direction: row-reverse;
+    flex-direction: column;
 }
 
 #khasiat .box-khasiat .content-1 {
-    width: 60%;
+    width: 100%;
 }
 
 #khasiat .box-khasiat .content-1 .flex-content {
     display: flex;
-    gap: 20% 10px;
+    gap: 12px;
 }
 
 #khasiat .box-khasiat .content-1 .flex-content .direction {
@@ -239,24 +196,24 @@ nav.navbar {
 
 #khasiat .box-khasiat .content-1 .flex-content .card-content {
     color: #000;
-    font-size: 12px;
+    font-size: 8px;
     box-shadow: 2px 2px .1px #ddd;
     padding: 20px;
+    text-align: center;
     border-radius: 20px;
     margin-bottom: 32px;
+    height: 32px;
 }
 
 #khasiat .box-khasiat .content-2 {
     position: relative;
-    width: 40%;
-    padding: 20px;
-    left: 25%;
-    transform: translateX(-50%);
+    left: 0;
+    min-height: 20vh;
 }
 
 #khasiat .box-khasiat .content-2 img {
-    width: 128px;
-    height: 128px;
+    width: 48px;
+    height: 48px;
     margin: 20px;
     border-radius: 5px;
     object-fit: fill;
@@ -265,23 +222,27 @@ nav.navbar {
 
 #khasiat .box-khasiat .content-2 img:nth-child(1) {
     position: absolute;
-    top: 20%;
-    left: 10%;
+    top: 0%;
+    left: 35%;
+    transform: translateX(-50%);
 }
 
 #khasiat .box-khasiat .content-2 img:nth-child(2) {
     position: absolute;
-    top: 40%;
-    left: 40%;
+    top: 20%;
+    left: 55%;
+    transform: translateX(-50%);
 }
 
 #khasiat .box-khasiat .content-2 img:nth-child(3) {
     position: absolute;
-    top: 60%;
-    left: 15%;
+    top: 45%;
+    left: 38%;
+    transform: translateX(-50%);
 }
+/* End Khasiat */
 
-
+/* Start Promo */
 #promo .box-content h2{
     text-align: center;
     font-size: 32px;
@@ -296,22 +257,22 @@ nav.navbar {
 #promo .box-content .list-promo {
     display: flex;
     margin-top: 56px;
+    flex-direction: column;
+    gap: 12vh 0;
 }
 
 #promo .list-promo .card-promo{
     position: relative;
-    width: 25%;
-    height: 32vh;
+    width: 100%;
+    height: 39vh;
     box-shadow: 2px 10px 5px #ddd;
-    margin: 20px;
-    padding: 20px;
     border-radius: 12px;
 }
 
 #promo .list-promo .card-promo img {
     position: absolute;
-    width: 50%;
-    top: -54px;
+    width: 35%;
+    top: -24px;
     left: 50%;
     transform: translateX(-50%);
     border-radius: 10px;
@@ -320,9 +281,10 @@ nav.navbar {
 #promo .list-promo .card-promo .desc {
     width: 100%;
     position: absolute;
-    top: 40%;
+    top: 25%;
     line-height: 20px;
     font-weight: 600;
+    padding: 20px;
     color: #222;
 }
 
@@ -345,27 +307,26 @@ nav.navbar {
     color: #fff;
     font-weight: 800;
 }
+/* End Promo */
 
-
+/* Start Testimonials */
 #testimonials .box-header-testimoni {
     margin-top: 64px;
-    /* width: 100%; */
     padding: 24px 20px;
     text-align: center;
 }
 
 #testimonials .box-header-testimoni .content-testimonials {
     display: flex;
-    flex-flow:row wrap;
+    flex-flow:column wrap;
     justify-content: center;
-    gap: 20px;
+    gap: 20vh 0px;
 }
 
 #testimonials .box-header-testimoni .content-testimonials .card-testimonial {
     position: relative;
-    padding: 20px;
     box-shadow: 5px 5px 0.1px rgba(0,0,0,0.2);
-    width: 25%;
+    width: 100%;
     height: 240px;
     border-radius: 20px;
 }
@@ -399,26 +360,36 @@ nav.navbar {
 }
 
 #testimonials .box-header-testimoni .content-testimonials .testimonial-text p {
-    line-height: 24px;
+    font-size: 12px;
+    line-height: 20px;
     font-weight: 600;
+    text-align: center;
 }
+/* End Testimonials */
 
+/* Start Branded */
 #branded {
     position: relative;
     margin-top: 56px;
     display: flex;
     padding: 20px 5%;
-    height: 32vh;
     background: #D1C898;
     color: #fff;
     line-height: 24px;
+    flex-direction: column-reverse;
 }
 
-#branded .contact {
-    width: 50%;
+#branded .company, #branded .contact {
+    display: none;
 }
 
-#branded .contact .box-icon {
+#branded .mobile-contact {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+}
+
+#branded .mobile-contact .box-icon {
     display: flex;
     gap: 20px;
     align-items: center;
@@ -427,72 +398,41 @@ nav.navbar {
     color: #fff;
 }
 
-#branded .contact .box-icon img {
+#branded .mobile-contact .box-icon img {
     background: #93913E8C;
     border-radius: 50%;
-    width: 24px;
-    height: 24px;
-    padding: 12px;
+    width: 16px;
+    height: 16px;
+    padding: 8px;
 }
 
-#branded .contact .box-icon p {
-    font-size: 18px;
+#branded .mobile-contact .box-icon p {
+    font-size: 12px;
 }
 
-#branded .company {
-    width: 50%;
-    margin-top: 24px;
-}
-
-#branded .company p {
-    text-align: justify;
-}
-
-#branded .company .bpom {
-    margin-top: 12px;
+#branded .mobile-contact .bpom {
     display: flex;
-    justify-content: flex-end;
+    justify-content: center;
+    flex-direction: column;
     align-items: center;
+    font-size: 12px;
 }
 
-#branded .company .bpom img {
+#branded .mobile-contact .bpom img {
     width: 84px;
     height: 84px;
 }
 
-/* #branded .brand {
-    display: flex;
-    justify-content: flex-start;
-    align-items: center;
-    width: 20%;
-    gap: 20px;
+#branded .mobile-company {
+    width: 100%;
+    margin-top: 24px;
+    text-align: center;
 }
 
-#branded .brand img {
-    width: 32px;
-    height: 32px;
+#branded .mobile-company p {
+    text-align: justify;
 }
-
-#branded .brand p {
-    font-size: 32px;
-    color: #fff;
-}
-
-#branded .bpom{
-    position: absolute;
-    bottom: 4%;
-    right: 5%;
-}
-
-#branded .bpom p {
-    color: #fff;
-    font-weight: 400;
-}
-
-#branded .bpom img{
-    width: 120px;
-    height: 120px;
-} */
+/* End Branded */
 
 #footer {
     background: #93913E8C;
@@ -503,4 +443,443 @@ nav.navbar {
     text-align: center;
     font-weight: 800;
     color: #fff;
+}
+
+/* Media Laptop */
+@media(min-width:992px) {
+    /* Start Global Style */
+    .line {
+        margin: auto;
+        width: 60%;
+        padding: 64px 0;
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+    }
+
+    .line div:nth-child(1){
+        box-sizing: border-box;
+        width: 32%;
+        height: 4px;
+        background: #D1C898;
+        z-index: 10;
+    }
+
+    .line div:nth-child(2){
+        box-sizing: border-box;
+        color: #D1C898;
+        font-size: calc(100%);
+        padding: 0 20px;
+        font-weight: 800;
+        z-index: 10;
+    }
+
+    .line div:nth-child(3){
+        box-sizing: border-box;
+        width: 32%;
+        height: 4px;
+        background: #D1C898;
+        z-index: 10;
+    }
+    /* End Global Style */
+
+    /* Start Navbar */
+    nav.navbar {
+        display: flex;
+        padding: 20px 5%;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    nav.mobile-navbar {
+        display: none;
+    }
+    
+    .navbar h3 {
+        font-style: italic;
+        color: #D1C898;
+    }
+    
+    .navbar .menu a{
+        color: #aaa;
+        padding: 0 20px;
+        font-size: 18px;
+        font-weight: 600;
+        text-decoration: none;
+    }
+    
+    .navbar .menu a:hover {
+        color: #D1C898;
+        border-bottom: 5px solid #D1C898;
+    }
+    
+    .navbar .menu a.active {
+        color: #D1C898;
+        border-bottom: 5px solid #D1C898;
+    }
+    
+    .navbar .menu a.buy {
+        padding: 12px 16px;
+        font-weight: 600;
+        color: #fff;
+        background: #D1C898;
+        border: none;
+        border-top-left-radius: 24px;
+        border-top-right-radius: 24px;
+        border-bottom-left-radius: 12px;
+        border-bottom-right-radius: 12px;
+        cursor: pointer;
+        text-decoration: none;   
+    }
+    
+    .navbar .buy:hover {
+        border: 0.2px solid #AB983733;
+    }
+    /* End Navbar */
+
+    /* Start Banner */
+    #banner {
+        padding: 0 5% 64px 5%;
+        display: flex;
+        flex-direction: row;
+    }
+
+    #banner .box-content {
+        position: relative;
+        width: 50%;
+    }
+
+    #banner .box-content .decor-content-float {
+        position: absolute;
+        left: 0;
+        padding: 20px;
+        width: 80%;
+        z-index: 10;
+        opacity: 1;
+    }
+
+    #banner .box-content .decor-content-float .main-content {
+        font-size: 42px;
+        line-height: 64px;
+        color: #D1C898;
+        font-weight: 800;
+        font-style: italic;
+        padding-bottom: 20px;
+    }
+
+    #banner .box-content .decor-content-float .sub-content {
+        font-size: 24px;
+        line-height: 36px;
+        color: #aaa;
+        font-weight: 400;
+        text-align: justify;
+        padding-bottom: 36px;
+    }
+
+    #banner .box-content .decor-content-float .buy {
+        padding: 12px 16px;
+        font-weight: 600;
+        color: #fff;
+        background: #D1C898;
+        border: none;
+        border-top-left-radius: 24px;
+        border-top-right-radius: 24px;
+        border-bottom-left-radius: 12px;
+        border-bottom-right-radius: 12px;
+        cursor: pointer;
+        text-decoration: none;
+    }
+
+    #banner .image-content {
+        position: relative;
+        width: 50%;
+    }
+
+    #banner .image-content .background-content {
+        position: relative;
+        top: 0%;
+        left: 50%;
+        transform: translateX(-50%);
+        border-radius: 50%;
+        background: #93913E8C;
+        opacity: 0.2;
+        width: 420px;
+        height: 420px;
+        margin: 32px 0;
+    }
+
+    #banner .image-content img {
+        position: absolute;
+        top: 5%;
+        left: 10%;
+        width: 80%;
+        height: 100%;
+        filter: drop-shadow(0 10px 12px #93913E8C);
+        transform: rotate(-3deg);
+    }
+    /* End Banner */
+
+    /* Start Khasiat */
+    #khasiat {
+        min-height: 64vh;
+    }
+
+    #khasiat .box-khasiat {
+        padding: 0 5%;  
+        display: flex;
+        flex-direction: row-reverse;
+    }
+
+    #khasiat .box-khasiat .content-1 {
+        width: 60%;
+    }
+
+    #khasiat .box-khasiat .content-1 .flex-content {
+        display: flex;
+        gap: 20% 10px;
+    }
+
+    #khasiat .box-khasiat .content-1 .flex-content .direction {
+        flex-direction: row;
+        width: 50%;
+    }
+
+    #khasiat .box-khasiat .content-1 .flex-content .card-content {
+        color: #000;
+        font-size: 12px;
+        box-shadow: 2px 2px .1px #ddd;
+        padding: 20px;
+        border-radius: 20px;
+        margin-bottom: 32px;
+    }
+
+    #khasiat .box-khasiat .content-2 {
+        position: relative;
+        width: 40%;
+        padding: 20px;
+        left: 25%;
+        transform: translateX(-50%);
+    }
+
+    #khasiat .box-khasiat .content-2 img {
+        width: 128px;
+        height: 128px;
+        margin: 20px;
+        border-radius: 5px;
+        object-fit: fill;
+        box-shadow: 2px 4px .5px #ddd;
+    }
+
+    #khasiat .box-khasiat .content-2 img:nth-child(1) {
+        position: absolute;
+        top: 20%;
+        left: 10%;
+    }
+
+    #khasiat .box-khasiat .content-2 img:nth-child(2) {
+        position: absolute;
+        top: 40%;
+        left: 40%;
+    }
+
+    #khasiat .box-khasiat .content-2 img:nth-child(3) {
+        position: absolute;
+        top: 60%;
+        left: 15%;
+    }
+    /* End Khasiat */
+
+    /* Start Promo */
+    #promo .box-content h2{
+        text-align: center;
+        font-size: 32px;
+        margin-top: 64px;
+        color: #D6CD9D;
+    }
+
+    #promo .box-content {
+        padding: 0 5%;
+    }
+
+    #promo .box-content .list-promo {
+        display: flex;
+        margin-top: 56px;
+        flex-direction: row;
+    }
+
+    #promo .list-promo .card-promo{
+        position: relative;
+        width: 25%;
+        height: 32vh;
+        box-shadow: 2px 10px 5px #ddd;
+        margin: 20px;
+        padding: 20px;
+        border-radius: 12px;
+    }
+
+    #promo .list-promo .card-promo img {
+        position: absolute;
+        width: 50%;
+        top: -54px;
+        left: 50%;
+        transform: translateX(-50%);
+        border-radius: 10px;
+    }
+
+    #promo .list-promo .card-promo .desc {
+        width: 100%;
+        position: absolute;
+        top: 40%;
+        line-height: 20px;
+        font-weight: 600;
+        color: #222;
+    }
+
+    #promo .list-promo .card-promo .desc .line-card {
+        width: 85%;
+        height: 2px;
+        background: #D6CD9D;
+        margin-top: 20px;
+        border-radius: 2px solid #D6CD9D;
+        z-index: 10;
+    }
+
+    #promo .list-promo .card-promo .desc .buy {
+        position: absolute;
+        margin-top: 12px;
+        padding: 8px 30px;
+        border-radius: 8px;
+        background: #D6CD9D;
+        text-decoration: none;
+        color: #fff;
+        font-weight: 800;
+    }
+    /* End Promo */
+
+    /* Start Testimonials */
+    #testimonials .box-header-testimoni {
+        margin-top: 64px;
+        /* width: 100%; */
+        padding: 24px 20px;
+        text-align: center;
+    }
+
+    #testimonials .box-header-testimoni .content-testimonials {
+        display: flex;
+        flex-flow:row wrap;
+        justify-content: center;
+        gap: 20px;
+    }
+
+    #testimonials .box-header-testimoni .content-testimonials .card-testimonial {
+        position: relative;
+        padding: 20px;
+        box-shadow: 5px 5px 0.1px rgba(0,0,0,0.2);
+        width: 25%;
+        height: 240px;
+        border-radius: 20px;
+    }
+
+    #testimonials .box-header-testimoni .content-testimonials img {
+        position: absolute;
+        top: -30%;
+        left: 20px;
+        width: 120px;
+        filter: drop-shadow(5px 5px .2px rgba(0,0,0,0.2));
+    }
+
+    #testimonials .box-header-testimoni .content-testimonials .testimonial-text {
+        position: absolute;
+        right: 0;
+        bottom: 0;
+        width: 65%;
+        height: 50%;
+        padding: 20px;
+        z-index: 10;
+        background: #fff;
+        border-top-left-radius: 20px;
+        border-bottom-right-radius: 20px;
+        text-align: justify;
+    }
+
+    #testimonials .box-header-testimoni .content-testimonials .testimonial-text .icon {
+        font-size: 48px;
+        text-align: center!important;
+        color: #D1C898;
+    }
+
+    #testimonials .box-header-testimoni .content-testimonials .testimonial-text p {
+        font-size: 16px;
+        line-height: 24px;
+        font-weight: 600;
+        text-align: justify;
+    }
+    /* End Testimonials */
+
+    /* Start Branded */
+    #branded {
+        position: relative;
+        margin-top: 56px;
+        display: flex;
+        flex-direction: row;
+        padding: 20px 5%;
+        background: #D1C898;
+        color: #fff;
+        line-height: 24px;
+    }
+
+    #branded .mobile-company, #branded .mobile-contact {
+        display: none;
+    }
+
+    #branded .company, #branded .contact {
+        display: block;
+    }
+
+    #branded .contact {
+        width: 50%;
+    }
+
+    #branded .contact .box-icon {
+        display: flex;
+        gap: 20px;
+        align-items: center;
+        margin-top: 20px;
+        text-decoration: none;
+        color: #fff;
+    }
+
+    #branded .contact .box-icon img {
+        background: #93913E8C;
+        border-radius: 50%;
+        width: 24px;
+        height: 24px;
+        padding: 12px;
+    }
+
+    #branded .contact .box-icon p {
+        font-size: 18px;
+    }
+
+    #branded .company {
+        width: 50%;
+        margin-top: 24px;
+    }
+
+    #branded .company p {
+        text-align: justify;
+    }
+
+    #branded .company .bpom {
+        margin-top: 12px;
+        display: flex;
+        justify-content: flex-end;
+        align-items: center;
+    }
+
+    #branded .company .bpom img {
+        width: 84px;
+        height: 84px;
+    }
+    /* End Branded */
 }
