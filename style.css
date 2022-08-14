@@ -441,6 +441,7 @@ nav.navbar {
 
 #branded .company {
     width: 50%;
+    margin-top: 24px;
 }
 
 #branded .company p {
