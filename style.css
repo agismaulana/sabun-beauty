@@ -388,11 +388,18 @@ nav.mobile-navbar {
     width: 100%;
     display: flex;
     justify-content: space-between;
+    flex-direction: column-reverse;
+}
+
+#branded .mobile-contact .icon {
+    display:flex;
+    justify-content: space-between;
 }
 
 #branded .mobile-contact .box-icon {
     display: flex;
-    gap: 20px;
+    flex-direction: column;
+    gap: 8px;
     align-items: center;
     margin-top: 20px;
     text-decoration: none;
@@ -411,17 +418,65 @@ nav.mobile-navbar {
     font-size: 12px;
 }
 
-#branded .mobile-contact .bpom {
+#branded .mobile-contact .flex-icon {
     display: flex;
+    justify-content: flex-start;
+    gap: 20px;
+    text-align: center;
+}
+
+#branded .mobile-contact .pay {
+    width: 50%;
+    margin-top: 12px;
+    padding: 8px 20px;
+    border-radius: 12px;
+    background: #fff;
+    display: flex;
+    color: #D1C898;
     justify-content: center;
     flex-direction: column;
     align-items: center;
-    font-size: 12px;
+}
+
+#branded .mobile-contact .pay img {
+    width: 64px;
+    height: 48px;
+}
+
+#branded .mobile-contact .sicepat {
+    width: 50%;
+    margin-top: 12px;
+    padding: 8px 20px;
+    border-radius: 12px;
+    background: #fff;
+    display: flex;
+    color: #D1C898;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+}
+
+#branded .mobile-contact .sicepat img {
+    width: 128px;
+    height: 64px;
+}
+
+#branded .mobile-contact .bpom {
+    width: 50%;
+    margin-top: 12px;
+    padding: 8px 20px;
+    border-radius: 12px;
+    background: #fff;
+    display: flex;
+    color: #D1C898;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
 }
 
 #branded .mobile-contact .bpom img {
-    width: 84px;
-    height: 84px;
+    width: 64px;
+    height: 64px;
 }
 
 #branded .mobile-company {
@@ -432,6 +487,26 @@ nav.mobile-navbar {
 
 #branded .mobile-company p {
     text-align: justify;
+}
+
+#branded .mobile-company .box-order .buy {
+    background: #33E24A;
+    margin: 18px 20px;
+    padding: 8px;
+    text-align: center;
+    text-decoration: none;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 0 12px;
+    border-radius: 20px;
+    box-shadow: 0px 5px .2px #40C351;
+}
+
+#branded .mobile-company .box-order .buy img {
+    width: 24px;
+    height: 24px;
 }
 /* End Branded */
 
@@ -828,6 +903,7 @@ nav.mobile-navbar {
         margin-top: 56px;
         display: flex;
         flex-direction: row;
+        align-items: center;
         padding: 20px 5%;
         background: #D1C898;
         color: #fff;
@@ -855,6 +931,26 @@ nav.mobile-navbar {
         color: #fff;
     }
 
+    #branded .contact .box-order .buy {
+        background: #33E24A;
+        padding: 12px;
+        width: 60%;
+        text-align: center;
+        text-decoration: none;
+        color: white;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 0 12px;
+        border-radius: 20px;
+        box-shadow: 0px 5px .2px #40C351;
+    }
+
+    #branded .contact .box-order .buy img {
+        width: 24px;
+        height: 24px;
+    }
+
     #branded .contact .box-icon img {
         background: #93913E8C;
         border-radius: 50%;
@@ -868,7 +964,7 @@ nav.mobile-navbar {
     }
 
     #branded .company {
-        width: 50%;
+        width: 80%;
         margin-top: 24px;
     }
 
@@ -876,16 +972,61 @@ nav.mobile-navbar {
         text-align: justify;
     }
 
+    #branded .company .flex-icon {
+        display: flex;
+        justify-content: flex-start;
+        gap: 20px;
+    }
+
+    #branded .company .pay {
+        margin-top: 12px;
+        padding: 8px 20px;
+        border-radius: 12px;
+        background: #fff;
+        display: flex;
+        color: #D1C898;
+        justify-content: flex-end;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    #branded .company .pay img {
+        width: 84px;
+        height: 64px;
+    }
+
+    #branded .company .sicepat {
+        margin-top: 12px;
+        padding: 8px 20px;
+        border-radius: 12px;
+        background: #fff;
+        display: flex;
+        color: #D1C898;
+        justify-content: flex-end;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    #branded .company .sicepat img {
+        width: 128px;
+        height: 64px;
+    }
+
     #branded .company .bpom {
         margin-top: 12px;
+        padding: 8px 20px;
+        border-radius: 12px;
+        background: #fff;
         display: flex;
+        color: #D1C898;
         justify-content: flex-end;
+        flex-direction: column;
         align-items: center;
     }
 
     #branded .company .bpom img {
-        width: 84px;
-        height: 84px;
+        width: 64px;
+        height: 64px;
     }
     /* End Branded */
 
@@ -899,6 +1040,7 @@ nav.mobile-navbar {
         text-align: center;
         font-weight: 800;
         color: #fff;
+        font-size: 16px;
     }
 
     /* End Footer */
